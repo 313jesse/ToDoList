@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ToDoListModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ToDoListEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tasks" EntityType="ToDoListModel.Task" />
+  </EntityContainer>
+  <EntityType Name="Task">
+    <Key>
+      <PropertyRef Name="TaskID" />
+    </Key>
+    <Property Name="TaskName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaskDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DueDate" Type="DateTime" Precision="0" />
+    <Property Name="Completed" Type="Boolean" />
+    <Property Name="TaskID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "newtask";
+}
+
+<h2>Add a new Task</h2>
+<form action="/Home/SaveNewTask" method="post">
+      <label>Task Name:</label><input type="text" name="TaskName" class="form-control"/>
+    <label>Description:</label><input type="text" name="TaskDescription" class="form-control"/>
+    <label>Due Date:</label><input type="date" name="DueDate" class="form-control"/>
+   <input type="hidden" value="false" name="Completed" class="form-control"/>
+    <br />
+    <br />
+    <input type="submit" value="Save" class="form-control"/>
+    </form>
+
